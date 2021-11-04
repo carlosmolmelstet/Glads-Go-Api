@@ -14,7 +14,7 @@ namespace TechWeekFatecSul
         {
             Configuration = configuration;
         }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -24,6 +24,19 @@ namespace TechWeekFatecSul
 
             services.AddDbContext<TechWeekFatecSulContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("TechWeekFatecSulContext")));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:3000")
+                                                    .AllowAnyHeader()
+                                                    .WithMethods("PUT", "DELETE", "GET", "POST")
+                                                    .AllowAnyMethod();
+                                  });
+            });
+
 
         }
 
@@ -46,6 +59,7 @@ namespace TechWeekFatecSul
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
