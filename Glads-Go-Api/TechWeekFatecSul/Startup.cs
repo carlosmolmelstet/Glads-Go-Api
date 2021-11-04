@@ -34,7 +34,7 @@ namespace TechWeekFatecSul
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:3000")
+                                      builder.WithOrigins("https://gladsgo.vercel.app/")
                                                     .AllowAnyHeader()
                                                     .WithMethods("PUT", "DELETE", "GET", "POST")
                                                     .AllowAnyMethod();
