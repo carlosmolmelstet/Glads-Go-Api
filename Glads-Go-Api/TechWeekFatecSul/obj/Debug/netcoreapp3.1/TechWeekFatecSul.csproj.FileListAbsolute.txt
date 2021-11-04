@@ -167,3 +167,6 @@ D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\ob
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\obj\Debug\netcoreapp3.1\TechWeekFatecSul.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\obj\Debug\netcoreapp3.1\TechWeekFatecSul.pdb
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\obj\Debug\netcoreapp3.1\TechWeekFatecSul.genruntimeconfig.cache
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\TechWeekFatecSul\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

@@ -25,6 +25,10 @@ namespace TechWeekFatecSul
             services.AddDbContext<TechWeekFatecSulContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("TechWeekFatecSulContext")));
 
+            services.AddControllersWithViews().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
