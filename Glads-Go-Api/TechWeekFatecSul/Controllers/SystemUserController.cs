@@ -40,8 +40,8 @@ namespace ApiMySql.Controllers
 
         [HttpPost("/Filter")]
         public async Task<ActionResult<ResponseData<SystemUser>>> Filter(FilterData filter)
-            {
-            var query =  _context.SystemUsers.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name);
+        {
+            var query = _context.SystemUsers.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name);
 
             var total = query.Count();
 

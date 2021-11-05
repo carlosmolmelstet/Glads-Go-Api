@@ -17,7 +17,7 @@ namespace TechWeekFatecSul
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called  the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
@@ -26,25 +26,22 @@ namespace TechWeekFatecSul
                     options.UseSqlite(Configuration.GetConnectionString("TechWeekFatecSulContext")));
 
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
-    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-);
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
 
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
-                                  builder =>
-                                  {
-                                      builder.WithOrigins("https://gladsgo.vercel.app")
-                                                    .AllowAnyHeader()
-                                                    .WithMethods("PUT", "DELETE", "GET", "POST")
-                                                    .AllowAnyMethod();
-                                  });
+                builder =>
+                {
+                    builder.WithOrigins("https://gladsgo.vercel.app", "http://localhost:3000")
+                                .AllowAnyHeader()
+                                .WithMethods("PUT", "DELETE", "GET", "POST")
+                                .AllowAnyMethod();
+                });
             });
-
-
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -54,7 +51,6 @@ namespace TechWeekFatecSul
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
