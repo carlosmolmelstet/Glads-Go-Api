@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechWeekFatecSul.Data;
 
 namespace TechWeekFatecSul.Migrations
 {
     [DbContext(typeof(TechWeekFatecSulContext))]
-    partial class TechWeekFatecSulContextModelSnapshot : ModelSnapshot
+    [Migration("20211107021846_Auth")]
+    partial class Auth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
