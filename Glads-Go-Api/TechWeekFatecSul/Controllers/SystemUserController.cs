@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiMySql.Data;
-using ApiMySql.Data.Entities.SystemUsers;
+using ApiMySql.Data.Entities.Users;
 using ApiMySql.Data.Entities.Positions;
 using TechWeekFatecSul.Data;
 using ApiMySql.Models;
@@ -15,40 +15,40 @@ namespace ApiMySql.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SystemUsersController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly TechWeekFatecSulContext _context;
 
-        public SystemUsersController(TechWeekFatecSulContext context)
+        public UsersController(TechWeekFatecSulContext context)
         {
             _context = context;
         }
 
-        // GET: api/SystemUsers
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SystemUser>>> GetSystemUsers()
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await _context.SystemUsers.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
         [HttpGet("/List")]
-        public async Task<ActionResult<IEnumerable<SystemUser>>> GetList()
+        public async Task<ActionResult<IEnumerable<User>>> GetList()
         {
-            var result = await _context.SystemUsers.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name).ToListAsync();
+            var result = await _context.Users.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name).ToListAsync();
             return result;
         }
 
         [HttpPost("/Filter")]
-        public async Task<ActionResult<ResponseData<SystemUser>>> Filter(FilterData filter)
+        public async Task<ActionResult<ResponseData<User>>> Filter(FilterData filter)
         {
-            var query = _context.SystemUsers.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name);
+            var query = _context.Users.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name);
 
             var total = query.Count();
 
             var skip = (filter.Page - 1) * filter.PageSize;
             var result = query.Skip(skip).Take(filter.PageSize).ToList();
 
-            return new ResponseData<SystemUser>
+            return new ResponseData<User>
             {
                 Total = total,
                 Data = result
@@ -61,11 +61,11 @@ namespace ApiMySql.Controllers
             return result;
         }
 
-        // GET: api/SystemUsers/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SystemUser>> GetSystemUser(Guid id)
+        public async Task<ActionResult<User>> GetUser(Guid id)
         {
-            var systemUser = await _context.SystemUsers.FindAsync(id);
+            var systemUser = await _context.Users.FindAsync(id);
 
             if (systemUser == null)
             {
@@ -75,9 +75,9 @@ namespace ApiMySql.Controllers
             return systemUser;
         }
 
-        // PUT: api/SystemUsers/5
+        // PUT: api/Users/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSystemUser(Guid id, SystemUser systemUser)
+        public async Task<IActionResult> PutUser(Guid id, User systemUser)
         {
             if (id != systemUser.Id)
             {
@@ -92,7 +92,7 @@ namespace ApiMySql.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SystemUserExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -105,35 +105,35 @@ namespace ApiMySql.Controllers
             return NoContent();
         }
 
-        // POST: api/SystemUsers
+        // POST: api/Users
         [HttpPost("/Save")]
-        public async Task<ActionResult<SystemUser>> PostSystemUser([FromBody] SystemUser systemUser)
+        public async Task<ActionResult<User>> PostUser([FromBody] User systemUser)
         {
-            _context.SystemUsers.Add(systemUser);
+            _context.Users.Add(systemUser);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSystemUser", new { id = systemUser.Id }, systemUser);
+            return CreatedAtAction("GetUser", new { id = systemUser.Id }, systemUser);
         }
 
-        // DELETE: api/SystemUsers/5
+        // DELETE: api/Users/5
         [HttpDelete("/Delete/{id}")]
-        public async Task<IActionResult> DeleteSystemUser(Guid id)
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
-            var systemUser = await _context.SystemUsers.FindAsync(id);
+            var systemUser = await _context.Users.FindAsync(id);
             if (systemUser == null)
             {
                 return NotFound();
             }
 
-            _context.SystemUsers.Remove(systemUser);
+            _context.Users.Remove(systemUser);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool SystemUserExists(Guid id)
+        private bool UserExists(Guid id)
         {
-            return _context.SystemUsers.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.Id == id);
         }
     }
 }
