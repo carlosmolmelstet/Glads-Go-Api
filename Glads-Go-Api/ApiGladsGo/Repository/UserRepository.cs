@@ -6,16 +6,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TechWeekFatecSul.Data;
+using ApiGladsGo.Data;
 
 namespace GladsAPI.Repository
 {
 
     public class UserRepository : IUserRepository
     {
-        private readonly TechWeekFatecSulContext _context;
+        private readonly ApiGladsGoContext _context;
 
-        public UserRepository(TechWeekFatecSulContext context)
+        public UserRepository(ApiGladsGoContext context)
         {
             _context = context;
         }
