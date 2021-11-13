@@ -8,9 +8,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using ApiGladsGo.Data;
+using TechWeekFatecSul.Data;
 
-namespace ApiGladsGo
+namespace TechWeekFatecSul
 {
     public class Startup
     {
@@ -26,8 +26,8 @@ namespace ApiGladsGo
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<ApiGladsGoContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("ApiGladsGoContext")));
+            services.AddDbContext<TechWeekFatecSulContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("TechWeekFatecSulContext")));
 
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore

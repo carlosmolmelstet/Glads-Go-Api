@@ -179,3 +179,4 @@ D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debu
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.pdb
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.genruntimeconfig.cache
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.csproj.AssemblyReference.cache
