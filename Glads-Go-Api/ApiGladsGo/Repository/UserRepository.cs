@@ -23,7 +23,7 @@ namespace GladsAPI.Repository
 
         public async Task<User> Login(string email, string password)
         {
-            return (await _context.Users.ToListAsync()).Where(x => x.Email.ToLower() == email.ToLower() && x.Password == password).FirstOrDefault();
+            return (await _context.Users.AsNoTracking().AsQueryable().Include(r => r.Position).ToListAsync()).Where(x => x.Email.ToLower() == email.ToLower() && x.Password == password).FirstOrDefault();
         }
 
         public async Task<IEnumerable<User>> GetList()
@@ -55,7 +55,7 @@ namespace GladsAPI.Repository
 
         public async Task<User> GetUser(Guid id)
         {
-            return await _context.Users.FindAsync(id); ;
+            return await _context.Users.AsNoTracking().AsQueryable().Include(e => e.Position).Where(e => e.Id == id).FirstOrDefaultAsync();
         }
 
 
@@ -85,6 +85,14 @@ namespace GladsAPI.Repository
 
         public async Task<User> PostUser(User user)
         {
+            var emails = await _context.Users.Select(e => e.Email).ToListAsync();
+
+            if(emails.Contains(user.Email))
+            {
+                throw new Exception("Email ja cadastrado");
+            }
+
+            user.Role = "user";
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;

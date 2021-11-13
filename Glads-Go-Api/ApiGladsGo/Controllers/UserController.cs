@@ -12,6 +12,7 @@ using TechWeekFatecSul.Data;
 using ApiMySql.Models;
 using GladsAPI.Repository;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace ApiMySql.Controllers
 {
@@ -39,6 +40,17 @@ namespace ApiMySql.Controllers
             {
                 return BadRequest(e.Message);
             }
+        }
+
+        [HttpGet("[controller]/RecoverUserInformation")]
+        [Authorize]
+        public async Task<ActionResult<User>> RecoverUserInformation()
+        {
+
+            var userId = new Guid(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var result = await _repository.GetUser(userId);
+            return Ok(result);
         }
 
         [HttpPost("[controller]/Filter")]
