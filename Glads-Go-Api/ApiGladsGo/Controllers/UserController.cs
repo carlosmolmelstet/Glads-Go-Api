@@ -1,13 +1,23 @@
-﻿using GladsAPI.Repository;
-using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
+using Microsoft.EntityFrameworkCore;
+using ApiMySql.Data;
+using ApiMySql.Data.Entities.Users;
+using ApiMySql.Data.Entities.Positions;
+using TechWeekFatecSul.Data;
+using ApiMySql.Models;
+using GladsAPI.Repository;
+using Microsoft.AspNetCore.Authorization;
 
-namespace GladsAPI.Controllers
+namespace ApiMySql.Controllers
 {
+    [Route("api")]
     [ApiController]
-    [Route("v1")]
-    public class UserController : Controller
+    public class UserController : ControllerBase
     {
         private readonly IUserRepository _repository;
 
@@ -16,24 +26,93 @@ namespace GladsAPI.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
-        [Route("anonymous")]
-        [AllowAnonymous]
-        public string Anonymous() => "Anônimo";
-
-        [HttpGet]
-        [Route("authenticated")]
+        [HttpGet("[controller]/List")]
         [Authorize]
-        public string Authenticated() => String.Format("Autenticado - {0}", User.Identity.Name);
+        public async Task<ActionResult<IEnumerable<User>>> GetList()
+        {
+            try
+            {
+                var result = await _repository.GetList();
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
 
-        [HttpGet]
-        [Route("user")]
-        [Authorize(Roles = "adm,user")]
-        public string Employee() => "User";
+        [HttpPost("[controller]/Filter")]
+        [Authorize]
+        public async Task<ActionResult<ResponseData<User>>> Filter(FilterData filter)
+        {
+            try
+            {
+                var result = await _repository.Filter(filter);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpGet("[controller]/Positions")]
+        [Authorize]
+        public async Task<ActionResult<IEnumerable<Position>>> GetPositions()
+        {
+            try
+            {
+                var result = await _repository.GetPositions();
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
 
-        [HttpGet]
-        [Route("adm")]
-        [Authorize(Roles = "adm")]
-        public string Manager() => "Adm";
+        [HttpGet("[controller]/{id}")]
+        [Authorize]
+        public async Task<ActionResult<User>> GetUser(Guid id)
+        {
+            try
+            {
+                var result = await _repository.GetUser(id);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPost("[controller]/Save")]
+        [Authorize]
+        public async Task<ActionResult<User>> Save([FromBody] User user)
+        {
+            try
+            {
+                var result = user.Id == Guid.Empty ?  await _repository.PostUser(user) : await _repository.PutUser(user);
+                return Ok("Usuario salvo com sucesso");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpDelete("[controller]/{id}")]
+        [Authorize]
+        public async Task<IActionResult> DeleteUser(Guid id)
+        {
+            try
+            {
+                 await _repository.DeleteUser(id);
+                return Ok("Usuario deletado com sucesso");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }

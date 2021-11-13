@@ -1,4 +1,5 @@
-﻿using ApiMySql.Data.Entities.Users;
+﻿using ApiMySql.Data.Entities.Positions;
+using ApiMySql.Data.Entities.Users;
 using ApiMySql.Models;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,12 @@ namespace GladsAPI.Repository
     public interface IUserRepository 
     {
         Task<User> Login(string email, string password);
-        Task<IEnumerable<User>> GetUsers();
+        Task<IEnumerable<Position>> GetPositions();
         Task<IEnumerable<User>> GetList();
         Task<ResponseData<User>> Filter(FilterData filter);
         Task<User> GetUser(Guid id);
-        Task PutUser(Guid id, User systemUser);
-        Task<User> PostUser(User systemUser);
+        Task<User> PutUser(User user);
+        Task<User> PostUser(User user);
         Task DeleteUser(Guid id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using ApiMySql.Data.Entities.Users;
+﻿using ApiMySql.Data.Entities.Positions;
+using ApiMySql.Data.Entities.Users;
 using ApiMySql.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -25,13 +26,14 @@ namespace GladsAPI.Repository
             return (await _context.Users.ToListAsync()).Where(x => x.Email.ToLower() == email.ToLower() && x.Password == password).FirstOrDefault();
         }
 
-        public async Task<IEnumerable<User>> GetUsers()
-        {
-            return await _context.Users.ToListAsync();
-        }
         public async Task<IEnumerable<User>> GetList()
         {
             var result = await _context.Users.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name).ToListAsync();
+            return result;
+        }
+        public async Task<IEnumerable<Position>> GetPositions()
+        {
+            var result = await _context.Positions.OrderBy(e => e.Name).ToListAsync();
             return result;
         }
 
@@ -57,22 +59,19 @@ namespace GladsAPI.Repository
         }
 
 
-        public async Task PutUser(Guid id, User systemUser)
+        public async Task<User> PutUser(User user)
         {
-            if (id != systemUser.Id)
-            {
-                throw new Exception();
-            }
 
-            _context.Entry(systemUser).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
                 await _context.SaveChangesAsync();
+                return user;
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!UserExists(user.Id))
                 {
                     throw new Exception();
                 }
@@ -84,12 +83,11 @@ namespace GladsAPI.Repository
 
         }
 
-        public async Task<User> PostUser(User systemUser)
+        public async Task<User> PostUser(User user)
         {
-            _context.Users.Add(systemUser);
+            _context.Users.Add(user);
             await _context.SaveChangesAsync();
-
-            return systemUser;
+            return user;
         }
 
         public async Task DeleteUser(Guid id)
