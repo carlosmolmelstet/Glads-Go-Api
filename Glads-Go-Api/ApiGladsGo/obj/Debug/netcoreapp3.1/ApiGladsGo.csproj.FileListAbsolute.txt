@@ -1,5 +1,6 @@
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\app.db
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\ApiGladsGo.exe
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\ApiGladsGo.deps.json
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\ApiGladsGo.runtimeconfig.json

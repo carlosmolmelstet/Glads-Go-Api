@@ -1,12 +1,17 @@
-﻿using ApiMySql.Data.Entities.Positions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ApiMySql.Data;
 using ApiMySql.Data.Entities.Users;
+using ApiMySql.Data.Entities.Positions;
+using TechWeekFatecSul.Data;
 using ApiMySql.Models;
 using GladsAPI.Repository;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ApiMySql.Controllers
 {
