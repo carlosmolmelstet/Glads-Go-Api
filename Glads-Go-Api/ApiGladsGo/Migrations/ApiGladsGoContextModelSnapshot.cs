@@ -39,19 +39,19 @@ namespace ApiGladsGo.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            Id = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Name = "Wide Reciver",
                             ShortName = "WR"
                         },
                         new
                         {
-                            Id = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            Id = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Name = "Quarterback",
                             ShortName = "QB"
                         },
                         new
                         {
-                            Id = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            Id = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Name = "Running Back",
                             ShortName = "RB"
                         });
@@ -98,402 +98,402 @@ namespace ApiGladsGo.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9d5e1cf5-9a36-4fd2-b2af-d14371591873"),
+                            Id = new Guid("e96ce186-ebca-414e-8b4b-b1672fcb0725"),
                             Email = "Player1@gmail.com",
                             Name = "Player 1 ",
                             Password = "adm",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "adm"
                         },
                         new
                         {
-                            Id = new Guid("d8be9f87-562b-4ea5-9265-302985090bb2"),
+                            Id = new Guid("1909b211-6e7b-410a-8ceb-891ac6433054"),
                             Email = "Player2@gmail.com",
                             Name = "Player 2 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("db903e18-c74a-40af-b2a9-76877d7c7f41"),
+                            Id = new Guid("0a33a987-dec1-4031-9de9-a454364650ed"),
                             Email = "Player3@gmail.com",
                             Name = "Player 3 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("9d65417c-18ae-4a55-be13-de1ac984db14"),
+                            Id = new Guid("cd7904d5-b764-4cfd-acf4-cca18b871f8e"),
                             Email = "Player4@gmail.com",
                             Name = "Player 4 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("2711a363-26cc-4524-a26a-faaa8b897c4a"),
+                            Id = new Guid("716f0d99-6b7d-4ff4-877a-d7c5ec6f3c15"),
                             Email = "Player5@gmail.com",
                             Name = "Player 5 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("a9f8a52e-4ad6-4c64-8d2b-f5b6839c0c3a"),
+                            Id = new Guid("ea18f0b9-ef19-4fbe-9ed3-199a5b008a3c"),
                             Email = "Player6@gmail.com",
                             Name = "Player 6 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("14f8a9c6-5012-490c-bceb-eb831fa605f3"),
+                            Id = new Guid("48166acd-47d2-46a2-bf05-7792fee7db27"),
                             Email = "Player7@gmail.com",
                             Name = "Player 7 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("8399da38-27a6-4562-ae9a-ee42b6531ab8"),
+                            Id = new Guid("7105b024-f5e1-4546-ae26-83882f4525d1"),
                             Email = "Player8@gmail.com",
                             Name = "Player 8 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("4013dfd4-1402-4ac7-9066-de3ac2481ee7"),
+                            Id = new Guid("a6fd163c-f196-4d18-b309-87d3b0b92459"),
                             Email = "Player9@gmail.com",
                             Name = "Player 9 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("1d3038ab-448f-46f0-9d69-1ab41315c606"),
+                            Id = new Guid("8b7a7fbc-977c-4ca2-a62d-117537568bdc"),
                             Email = "Player10@gmail.com",
                             Name = "Player 10 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("003df1db-07af-4154-9ea9-b6f86e167e0c"),
+                            Id = new Guid("99bd79c2-4edc-44e9-b80a-b0e01ec52c0e"),
                             Email = "Player11@gmail.com",
                             Name = "Player 11 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("ed406918-c48f-44f3-a897-5680214c834b"),
+                            Id = new Guid("ea339aaa-8096-4911-9a24-c18e78ed5d84"),
                             Email = "Player12@gmail.com",
                             Name = "Player 12 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("7c300731-4db7-4f4c-8362-c524f42166a4"),
+                            Id = new Guid("c96e8e54-0b26-41cf-9f56-3fb5be9b203b"),
                             Email = "Player13@gmail.com",
                             Name = "Player 13 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("ed9248c3-f85a-4645-bb82-00f0d709be33"),
+                            Id = new Guid("7e9d48bb-16c0-4122-8409-db47e93b279b"),
                             Email = "Player14@gmail.com",
                             Name = "Player 14 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("81d0e316-c80b-4f04-b040-4c13ddf48d0d"),
+                            Id = new Guid("6be7c39d-de6f-456e-9bfe-1a3460e0ff3f"),
                             Email = "Player15@gmail.com",
                             Name = "Player 15 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("cead14cd-fb29-497f-8f6d-4c88ac7a13cd"),
+                            Id = new Guid("7d475997-2614-4627-8ccf-beca65bc2547"),
                             Email = "Player16@gmail.com",
                             Name = "Player 16 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("d6ea5435-244f-42c5-aa7f-83f89a52094e"),
+                            Id = new Guid("feeba143-297c-4aa3-931c-e213a1642e20"),
                             Email = "Player17@gmail.com",
                             Name = "Player 17 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("c2473cd5-3f80-4e63-8d5e-69b5ccc6ff5f"),
+                            Id = new Guid("59234a36-2d5e-415d-a496-f5b007464c2b"),
                             Email = "Player18@gmail.com",
                             Name = "Player 18 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("f8bfdc52-5b3b-48d2-a4c6-67ec57af0688"),
+                            Id = new Guid("75f69395-8df6-4a92-bf7a-7a7b47d74800"),
                             Email = "Player19@gmail.com",
                             Name = "Player 19 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("d456b25e-1a2d-4292-b973-c2c8e83fd953"),
+                            Id = new Guid("dad87aff-83c9-4d64-b79e-89a8bf033b0d"),
                             Email = "Player20@gmail.com",
                             Name = "Player 20 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("81967380-5645-4ac4-9dce-61c22ad88af7"),
+                            Id = new Guid("31bf6923-57cc-4acc-9c43-723f434f4630"),
                             Email = "Player21@gmail.com",
                             Name = "Player 21 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("ac44cdb9-8d06-44a1-a2e9-fccd8d863de3"),
+                            Id = new Guid("5125112f-81e9-4741-a885-e143d9bbc061"),
                             Email = "Player22@gmail.com",
                             Name = "Player 22 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("c4451c94-571b-4a90-9eb5-1423a0bda09e"),
+                            Id = new Guid("48617d5a-b82c-4343-a5bc-b7fcad3ec02b"),
                             Email = "Player23@gmail.com",
                             Name = "Player 23 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("08f800e2-5b87-4daa-806e-dcf86b9fe949"),
+                            Id = new Guid("9b9fc95c-fa46-4c97-9772-fc341640c2eb"),
                             Email = "Player24@gmail.com",
                             Name = "Player 24 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("be9d6e0a-8139-4fdc-bfe5-156aedaef122"),
+                            Id = new Guid("af2b6897-e25b-4c40-90a5-e9117d6349b5"),
                             Email = "Player25@gmail.com",
                             Name = "Player 25 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("4e6f0e09-3b47-4dbe-a93d-9e852a549d6a"),
+                            Id = new Guid("902231c3-03f4-4527-987e-b630e6beeb88"),
                             Email = "Player26@gmail.com",
                             Name = "Player 26 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("7ebf64ef-af0a-40bd-98d3-80912346144a"),
+                            Id = new Guid("3c63d139-ff8d-43b1-abc2-e219e26f11fa"),
                             Email = "Player27@gmail.com",
                             Name = "Player 27 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("47004ae1-999e-4d1d-91f0-4f3e1a5e9da7"),
+                            Id = new Guid("f53687b5-06a6-43c6-8703-2c3da586f84b"),
                             Email = "Player28@gmail.com",
                             Name = "Player 28 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("4048c397-f514-4ea1-82dd-9e9800e815e1"),
+                            Id = new Guid("6ae2491c-c091-4166-80ca-a2224cf76b07"),
                             Email = "Player29@gmail.com",
                             Name = "Player 29 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("f6c47ff7-335a-40f5-b431-af0a58b2b9e6"),
+                            Id = new Guid("6d89644f-084b-4a6a-a054-348e123cc71c"),
                             Email = "Player30@gmail.com",
                             Name = "Player 30 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("42c28349-53e3-4194-9614-50dd655474da"),
+                            Id = new Guid("623b2b85-8b50-417f-bbd7-5aca242a2a06"),
                             Email = "Player31@gmail.com",
                             Name = "Player 31 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("5862b9b3-8f24-4bbc-82d7-00afa904f2a5"),
+                            PositionId = new Guid("f58a4169-2685-42b3-bead-3218a532d16a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("0da3f550-d95f-43b4-b11a-07358b635c7d"),
+                            Id = new Guid("73b10e31-0e27-4a22-8dac-4368f2c2becb"),
                             Email = "Player32@gmail.com",
                             Name = "Player 32 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("15985f12-f0d5-43aa-b6ed-0aa3f55714ca"),
+                            Id = new Guid("4cf5d516-c20a-4a8e-b2d2-20a7e8ca1658"),
                             Email = "Player33@gmail.com",
                             Name = "Player 33 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("1aae7de9-266d-4e51-926b-a07be092c743"),
+                            Id = new Guid("666500e3-7a6c-47c1-8fde-e343cf6371ce"),
                             Email = "Player34@gmail.com",
                             Name = "Player 34 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("a0c3c58b-845d-47ac-9e97-f848e7c506c8"),
+                            Id = new Guid("9617edb1-b973-4771-a1b2-45d95d706a43"),
                             Email = "Player35@gmail.com",
                             Name = "Player 35 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("2a99cbf7-04c5-42d9-bf46-66ec8abb6bac"),
+                            PositionId = new Guid("bdb11386-e91e-42cf-bcd6-8314f19b408a"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("adcd730c-2af4-42c0-80ec-b7652619a30a"),
+                            Id = new Guid("6f6c0adb-1e57-4273-b75e-d65ce7f76863"),
                             Email = "Player36@gmail.com",
                             Name = "Player 36 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("186aedc4-b738-44b1-97a6-11c0a751163d"),
+                            Id = new Guid("1b566120-a521-4161-8f74-d970a8718f39"),
                             Email = "Player37@gmail.com",
                             Name = "Player 37 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("4a24c058-1389-45f9-829c-dbc124929668"),
+                            Id = new Guid("e7245300-a56a-41f5-9851-c8a6da67e92f"),
                             Email = "Player38@gmail.com",
                             Name = "Player 38 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("e8f78da0-c114-43fc-bec7-86b043bb48b7"),
+                            Id = new Guid("74f32e3a-1dae-4fbe-af7b-3131113a7878"),
                             Email = "Player39@gmail.com",
                             Name = "Player 39 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         },
                         new
                         {
-                            Id = new Guid("c89b5b89-30fe-48eb-9bf6-bb923800e791"),
+                            Id = new Guid("caba2269-b58b-4af7-94f8-283e27ac1514"),
                             Email = "Player40@gmail.com",
                             Name = "Player 40 ",
                             Password = "user",
                             Phone = "(47) 99630-5948",
-                            PositionId = new Guid("b527b14b-a0cf-4763-b64f-07ec482cc784"),
+                            PositionId = new Guid("19c42e0d-2f27-470a-a91b-dbefa72a8535"),
                             Role = "user"
                         });
                 });
