@@ -3,14 +3,16 @@ using System;
 using ApiGladsGo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ApiGladsGo.Migrations
 {
     [DbContext(typeof(ApiGladsGoContext))]
-    partial class ApiGladsGoContextModelSnapshot : ModelSnapshot
+    [Migration("20211113191329_carlosMara")]
+    partial class carlosMara
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
