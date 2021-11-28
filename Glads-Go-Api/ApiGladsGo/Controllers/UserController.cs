@@ -68,7 +68,6 @@ namespace ApiMySql.Controllers
             }
         }
         [HttpGet("[controller]/Positions")]
-        [Authorize]
         public async Task<ActionResult<IEnumerable<Position>>> GetPositions()
         {
             try
