@@ -26,8 +26,11 @@ namespace TechWeekFatecSul
         {
             services.AddControllersWithViews();
 
+            string mySqlConnection = Configuration.GetConnectionString("DefaultConnection");
+
+
             services.AddDbContext<TechWeekFatecSulContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("TechWeekFatecSulContext")));
+                    options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
 
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
