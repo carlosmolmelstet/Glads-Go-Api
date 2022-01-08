@@ -689,10 +689,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/3.1.1": {
+      "Microsoft.EntityFrameworkCore.Tools/3.1.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "3.1.1"
+          "Microsoft.EntityFrameworkCore.Design": "3.1.10"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -3868,17 +3868,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/3.1.1": {
-      "sha512": "rk6bBWIACTeEDFQnmslhPQYyVI4Qwy1k1XQ5NAwyZZ6Po6kGvyRs7n0tzb2M40m461vrebKhclLyR8VQYSuxig==",
+    "Microsoft.EntityFrameworkCore.Tools/3.1.10": {
+      "sha512": "Obu7SuykJ8ouGciuxIHwM/FKBi6fJaIZGEkInq2EVtufflOcepm89yMwAgHRVjb+Rrn7MmjgLYfy1Bm1Chxt0A==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/3.1.1",
+      "path": "microsoft.entityframeworkcore.tools/3.1.10",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.tools.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.3.1.10.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -9705,10 +9705,11 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.15",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.20",
       "Microsoft.Data.Sqlite.Core >= 3.1.1",
+      "Microsoft.EntityFrameworkCore >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.1",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.1",
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "Newtonsoft.Json >= 13.0.1",
       "Pomelo.EntityFrameworkCore.MySql >= 5.0.0-alpha.2",
@@ -9772,6 +9773,10 @@
             "target": "Package",
             "version": "[3.1.1, )"
           },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.7, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -9790,7 +9795,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[3.1.1, )"
+            "version": "[3.1.10, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

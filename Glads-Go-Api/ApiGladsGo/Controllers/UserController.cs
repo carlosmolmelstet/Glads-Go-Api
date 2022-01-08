@@ -97,7 +97,6 @@ namespace ApiMySql.Controllers
         }
 
         [HttpPost("[controller]/Save")]
-        [Authorize]
         public async Task<ActionResult<User>> Save([FromBody] User user)
         {
             try

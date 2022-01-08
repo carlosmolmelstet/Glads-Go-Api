@@ -9,6 +9,7 @@ D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debu
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\ApiGladsGo.pdb
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\ApiGladsGo.Views.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\ApiGladsGo.Views.pdb
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
@@ -52,9 +53,11 @@ D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debu
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\MySqlConnector.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
@@ -62,12 +65,15 @@ D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debu
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
@@ -176,9 +182,3 @@ D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debu
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.pdb
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.genruntimeconfig.cache
 D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\obj\Debug\netcoreapp3.1\ApiGladsGo.csproj.AssemblyReference.cache
-D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\MySqlConnector.dll
-D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
-D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-D:\Users\molme\source\repos\Github\Glads-Go-Api\Glads-Go-Api\ApiGladsGo\bin\Debug\netcoreapp3.1\Humanizer.dll

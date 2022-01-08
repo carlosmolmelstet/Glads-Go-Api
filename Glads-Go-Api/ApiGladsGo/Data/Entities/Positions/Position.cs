@@ -9,6 +9,6 @@ namespace ApiMySql.Data.Entities.Positions
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string ShortName { get; set; }
-        public virtual  IEnumerable<User> Users { get; set; }
+        public virtual IEnumerable<User> Users { get; set; }
     }
 }

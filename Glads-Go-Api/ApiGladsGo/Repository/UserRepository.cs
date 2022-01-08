@@ -1,4 +1,5 @@
-﻿using ApiMySql.Data.Entities.Positions;
+﻿using ApiGladsGo.Data.Enums;
+using ApiMySql.Data.Entities.Positions;
 using ApiMySql.Data.Entities.Users;
 using ApiMySql.Models;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +14,9 @@ namespace GladsAPI.Repository
 
     public class UserRepository : IUserRepository
     {
-        private readonly TechWeekFatecSulContext _context;
+        private readonly GladsGoContext _context;
 
-        public UserRepository(TechWeekFatecSulContext context)
+        public UserRepository(GladsGoContext context)
         {
             _context = context;
         }
@@ -91,8 +92,8 @@ namespace GladsAPI.Repository
             {
                 throw new Exception("Email ja cadastrado");
             }
-
-            user.Role = "user";
+            user.EmergencyContacts = user.EmergencyContacts.Where(e => e.Name != "" && e.Phone != "").ToList();
+            user.Role = Role.User;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;

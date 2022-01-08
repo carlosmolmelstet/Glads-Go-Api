@@ -29,7 +29,7 @@ namespace TechWeekFatecSul
             string mySqlConnection = Configuration.GetConnectionString("DefaultConnection");
 
 
-            services.AddDbContext<TechWeekFatecSulContext>(options =>
+            services.AddDbContext<GladsGoContext>(options =>
                     options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
 
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
