@@ -56,31 +56,26 @@ namespace GladsAPI.Repository
 
         public async Task<User> GetUser(Guid id)
         {
-            return await _context.Users.AsNoTracking().AsQueryable().Include(e => e.Position).Where(e => e.Id == id).FirstOrDefaultAsync();
+            return await _context.Users.AsNoTracking().AsQueryable().Include(e => e.Position).Include(e => e.EmergencyContacts).Where(e => e.Id == id).FirstOrDefaultAsync();
         }
 
 
         public async Task<User> PutUser(User user)
         {
 
-            _context.Entry(user).State = EntityState.Modified;
+            var emails = await _context.Users.Where(e => e.Id != user.Id).Select(e => e.Email).ToListAsync();
 
-            try
+            if (emails.Contains(user.Email))
             {
-                await _context.SaveChangesAsync();
-                return user;
+                throw new Exception("Email ja cadastrado");
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(user.Id))
-                {
-                    throw new Exception();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            user.EmergencyContacts = user.EmergencyContacts.Where(e => e.Name != "" && e.Phone != "").ToList();
+            user.Role = Role.User;
+            var oldEmergencyContacts = await _context.EmergencyContacts.Where(e => e.UserId == user.Id).ToListAsync();
+            _context.EmergencyContacts.RemoveRange(oldEmergencyContacts);
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return user;
 
         }
 
@@ -94,6 +89,7 @@ namespace GladsAPI.Repository
             }
             user.EmergencyContacts = user.EmergencyContacts.Where(e => e.Name != "" && e.Phone != "").ToList();
             user.Role = Role.User;
+
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;
