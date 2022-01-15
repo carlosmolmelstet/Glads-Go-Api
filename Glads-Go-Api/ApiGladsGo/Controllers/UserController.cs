@@ -97,6 +97,7 @@ namespace ApiMySql.Controllers
         }
 
         [HttpPost("[controller]/Save")]
+        [Authorize]
         public async Task<ActionResult<User>> Save([FromBody] User user)
         {
             try
@@ -118,6 +119,21 @@ namespace ApiMySql.Controllers
             {
                  await _repository.DeleteUser(id);
                 return Ok("Usuario deletado com sucesso");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPost("[controller]/Points")]
+        [Authorize]
+        public async Task<ActionResult<IEnumerable<User>>> UpdatePoints([FromBody] UpdatePointsDto updatePoints)
+        {
+            try
+            {
+                var result =  await _repository.UpdatePoints(updatePoints);
+                return Ok("Pontos alterados com sucesso");
             }
             catch (Exception e)
             {

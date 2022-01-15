@@ -95,6 +95,16 @@ namespace GladsAPI.Repository
             return user;
         }
 
+        public async Task<IEnumerable<User>> UpdatePoints(UpdatePointsDto updatePoints)
+        {
+
+            var users = await _context.Users.Where(e => updatePoints.UserIds.Contains(e.Id)).ToListAsync();
+            users.Select(x => { x.Points = x.Points + updatePoints.Points < 0 ? 0 : x.Points + updatePoints.Points; return x; }).ToArray();
+            _context.UpdateRange(users);
+            await _context.SaveChangesAsync();
+            return users;
+        }
+
         public async Task DeleteUser(Guid id)
         {
             var systemUser = await _context.Users.FindAsync(id);

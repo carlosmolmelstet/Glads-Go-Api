@@ -1,6 +1,7 @@
 ﻿using ApiMySql.Data.Entities.Positions;
 using ApiMySql.Data.Entities.Users;
 using ApiMySql.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -17,5 +18,6 @@ namespace GladsAPI.Repository
         Task<User> PutUser(User user);
         Task<User> PostUser(User user);
         Task DeleteUser(Guid id);
+        Task<IEnumerable<User>> UpdatePoints(UpdatePointsDto updatePoints);
     }
 }

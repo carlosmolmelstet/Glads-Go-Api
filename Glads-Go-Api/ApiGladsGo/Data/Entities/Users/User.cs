@@ -26,6 +26,7 @@ namespace ApiMySql.Data.Entities.Users
         public string City { get; set; }
         public string State { get; set; }
         public string Password { get; set; }
+        public int Points { get; set; }
         public Role Role { get; set; }
         public Guid PositionId { get; set; }
         public virtual Position Position { get; set; }
