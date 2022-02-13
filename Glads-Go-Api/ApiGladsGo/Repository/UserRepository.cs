@@ -40,12 +40,24 @@ namespace GladsAPI.Repository
 
         public async Task<ResponseData<User>> Filter(FilterData filter)
         {
-            var query = _context.Users.AsNoTracking().AsQueryable().Include(r => r.Position).OrderBy(e => e.Name);
+            var query = await _context.Users.AsNoTracking().AsQueryable().Include(r => r.Position).ToListAsync();
+
+            if (!String.IsNullOrEmpty(filter.Search))
+            {
+                var search = filter.Search.ToLower();
+                query = query.Where(e =>
+                e.Name.ToLower().Contains(search) ||
+                e.Surname.ToLower().Contains(search) ||
+                e.Position.Name.ToLower().Contains(search) ||
+                e.Position.ShortName.ToLower().Contains(search) ||
+                e.JerseyNumber.ToString().ToLower().Contains(search))
+                .Select(e => e).ToList();
+            }
 
             var total = query.Count();
 
             var skip = (filter.Page - 1) * filter.PageSize;
-            var result = query.Skip(skip).Take(filter.PageSize).ToList();
+            var result = query.Skip(skip).Take(filter.PageSize).OrderBy(e => e.Name).ToList();
 
             return new ResponseData<User>
             {
@@ -83,7 +95,7 @@ namespace GladsAPI.Repository
         {
             var emails = await _context.Users.Select(e => e.Email).ToListAsync();
 
-            if(emails.Contains(user.Email))
+            if (emails.Contains(user.Email))
             {
                 throw new Exception("Email ja cadastrado");
             }
@@ -97,7 +109,6 @@ namespace GladsAPI.Repository
 
         public async Task<IEnumerable<User>> UpdatePoints(UpdatePointsDto updatePoints)
         {
-
             var users = await _context.Users.Where(e => updatePoints.UserIds.Contains(e.Id)).ToListAsync();
             users.Select(x => { x.Points = x.Points + updatePoints.Points < 0 ? 0 : x.Points + updatePoints.Points; return x; }).ToArray();
             _context.UpdateRange(users);
